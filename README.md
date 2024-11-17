@@ -1,38 +1,38 @@
 # 32Bit_ALU Simulation
 
-# Aim: 
+**Aim:**
 
-Write a verilog code for 32 bit ALU supporting four logical and four arithmetic operations,use case statement and if statement for ALU behavioral modeling.
+&emsp;&emsp;Write a verilog code for 32 bit ALU supporting four logical and four arithmetic operations,use case statement and if statement for ALU behavioral modeling.
 
-To Verify the Functionality using Test Bench.
+&emsp;&emsp;To Verify the Functionality using Test Bench.
 
-# Tool Required:
+**Tool Required:**
 
-Functional Simulation: Incisive Simulator (ncvlog, ncelab, ncsim)
+&emsp;&emsp;Functional Simulation: Incisive Simulator (ncvlog, ncelab, ncsim)
 
-## Design Information and Bock Diagram:
+**Design Information and Bock Diagram:**
 
-The ALU will take in two 32-bit values, and control line. An Arithmetic unit does the following task like addition subtraction, multiplication and logical operations. As the input is given in 32 bit we get 32 bit output. The arithmetic will show only one output at a time so a selector is necessary to select one of the operator.
+&emsp;&emsp;The ALU will take in two 32-bit values, and control line. An Arithmetic unit does the following task like addition subtraction, multiplication and logical operations. As the input is given in 32 bit we get 32 bit output. The arithmetic will show only one output at a time so a selector is necessary to select one of the operator.
 
 ![image](https://github.com/user-attachments/assets/e574788c-253f-46da-8468-298fe2844f7a)
 
-### Fig 1 : Block Diagram of 32 Bit ALU 
+**<p align="center">Fig 1 : Block Diagram of 32 Bit ALU** 
 
-## Creating a Work space :
+**Creating a Work space:**
 
-Create a folder in your name (Note: Give folder name without any space) and Create a new sub-Directory name it as Exp3 or alu_32bit for the Design and open a terminal from the Sub-Directory.
+&emsp;&emsp;Create a folder in your name (Note: Give folder name without any space) and Create a new sub-Directory name it as Exp3 or alu_32bit for the Design and open a terminal from the Sub-Directory.
 
-## Creating Source Codes 
+**Creating Source Codes:**
 
-In the Terminal, type gedit <filename>.v (ex: gedit alu_32bit.v). 
+&emsp;&emsp;In the Terminal, type gedit <filename>.v (ex: gedit alu_32bit.v). 
 
-A Blank Document opens up into which the following source code can be typed down. 
+&emsp;&emsp;A Blank Document opens up into which the following source code can be typed down. 
 
-(Note : File name should be with HDL Extension)
+&emsp;&emsp;(Note : File name should be with HDL Extension)
 
-## a)To Verify the Functionality using Test Bench
+**a)To Verify the Functionality using Test Bench**
 
-## Source Code – Using Case Statement :
+**Source Code – Using Case Statement:**
 
 ```
 module alu_32bit_case(y,a,b,f);
@@ -56,13 +56,13 @@ end
 endmodule
 ```
 
-Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
+&emsp;&emsp;Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
 
-## Creating Test bench:
+**Creating Test bench:**
 
-Similarly, create your test bench using gedit <filename_tb>.v or <filename_tb>.vhdl to open a new blank document (alu_32bit_tb_case).
+&emsp;&emsp;Similarly, create your test bench using gedit <filename_tb>.v or <filename_tb>.vhdl to open a new blank document (alu_32bit_tb_case).
 
-## Test Bench :
+**Test Bench:**
 
 ```
 module alu_32bit_tb_case;
@@ -87,155 +87,155 @@ end
 endmodule
 ```
 
-Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
+&emsp;&emsp;Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
 
-## Functional Simulation: 
+**Functional Simulation:**
 
-Invoke the cadence environment by type the below commands 
+&emsp;&emsp;Invoke the cadence environment by type the below commands 
 
-tcsh (Invokes C-Shell) 
+&emsp;&emsp;&emsp;&emsp;tcsh (Invokes C-Shell) 
 
-source /cadence/install/cshrc (mention the path of the tools) 
+&emsp;&emsp;&emsp;&emsp;source /cadence/install/cshrc (mention the path of the tools) 
 
-(The path of cshrc could vary depending on the installation destination)
+&emsp;&emsp;&emsp;&emsp;(The path of cshrc could vary depending on the installation destination)
       
-After this you can see the window like below 
+&emsp;&emsp;After this you can see the window like below 
 
 ![Picture1](https://github.com/user-attachments/assets/685a95cf-0843-4bf9-841f-f2d21b737da1)
 
-### Fig 2: Invoke the Cadence Environment
+**<p align="center">Fig 2: Invoke the Cadence Environment**
 
-To Launch Simulation tool 
+&emsp;&emsp;To Launch Simulation tool 
 
-•linux:/> nclaunch -new& // “-new” option is used for invoking NCVERILOG for the first time for any design 
+&emsp;&emsp;&emsp;&emsp;linux:/> nclaunch -new& // “-new” option is used for invoking NCVERILOG for the first time for any design 
 
-or
+&emsp;&emsp;&emsp;&emsp;or
 
-•linux:/> nclaunch& // On subsequent calls to NCVERILOG 
+&emsp;&emsp;&emsp;&emsp;linux:/> nclaunch& // On subsequent calls to NCVERILOG 
 
 
-It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
+&emsp;&emsp;It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple Step .
 
 ![Picture2](https://github.com/user-attachments/assets/0f120a86-c3a1-440c-a2b0-74ecf93c4519)
 
-### Fig 3: Setting Multi-step simulation
+**<p align="center">Fig 3: Setting Multi-step simulation**
 
-Select Multiple Step and then select “Create cds.lib File” as shown in below figure 
+&emsp;&emsp;Select Multiple Step and then select “Create cds.lib File” as shown in below figure 
 
-Click the cds.lib file and save the file by clicking on Save option 
+&emsp;&emsp;Click the cds.lib file and save the file by clicking on Save option 
 
 ![10_6_2024 2_48_15 PM](https://github.com/user-attachments/assets/7f774714-7d5d-40b8-97c3-0c39573770b4)
 
-### Fig 4:cds.lib file Creation
+**<p align="center">Fig 4:cds.lib file Creation**
 
-Save cds.lib file and select the correct option for cds.lib file format based on the HDL Language and Libraries used. 
+&emsp;&emsp;Save cds.lib file and select the correct option for cds.lib file format based on the HDL Language and Libraries used. 
 
-Select “Don’t include any libraries (verilog design)” from “New cds.lib file” and click on “OK” as in below figure .
+&emsp;&emsp;Select “Don’t include any libraries (verilog design)” from “New cds.lib file” and click on “OK” as in below figure .
 
-We are simulating verilog design without using any libraries 
+&emsp;&emsp;We are simulating verilog design without using any libraries 
 
-A Click “OK” in the “nclaunch: Open Design Directory” window as shown in below figure 
+&emsp;&emsp;A Click “OK” in the “nclaunch: Open Design Directory” window as shown in below figure 
 
 ![Screenshot 2024-10-05 085242](https://github.com/user-attachments/assets/99961b87-6afb-4942-9bcf-4d8808cf056c)
 
-### Fig 5: Selection of Don’t include any libraries
+**<p align="center">Fig 5: Selection of Don’t include any libraries**
 
-A ‘NCLaunch window’ appears as shown in figure below
+&emsp;&emsp;A ‘NCLaunch window’ appears as shown in figure below
 
-Left side you can see the HDL files. Right side of the window has worklib and snapshots directories listed. 
+&emsp;&emsp;Left side you can see the HDL files. Right side of the window has worklib and snapshots directories listed. 
 
-Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation .
+&emsp;&emsp;Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation .
 
-To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
+&emsp;&emsp;To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation. 
 
 ![Screenshot 2024-10-05 085312](https://github.com/user-attachments/assets/c1d66c70-e898-48b9-8b2c-f731fe860597)
 
-### Fig 6: Nclaunch Window
+**<p align="center"> Fig 6: Nclaunch Window**
 
-## Step 1: Compilation:
+**Step 1: Compilation:**
 
-– Process to check the correct Verilog language syntax and usage 
+&emsp;&emsp;Process to check the correct Verilog language syntax and usage 
 
-Inputs: Supplied are Verilog design and test bench codes 
+&emsp;&emsp;Inputs: Supplied are Verilog design and test bench codes 
 
-Outputs: Compiled database created in mapped library if successful, generates report else error reported in log file 
+&emsp;&emsp;Outputs: Compiled database created in mapped library if successful, generates report else error reported in log file 
 
-## 	Steps for compilation: 
+**Steps for compilation:**
 
-1. Create work/library directory (most of the latest simulation tools creates automatically)
+&emsp;&emsp;1. Create work/library directory (most of the latest simulation tools creates automatically)
    
-2. Map the work to library created (most of the latest simulation tools creates automatically)
+&emsp;&emsp;2. Map the work to library created (most of the latest simulation tools creates automatically)
    
-3. Run the compile command with compile options
+&emsp;&emsp;3. Run the compile command with compile options
    
-i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v 
+&emsp;&emsp;i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v 
 
-Left side select the file and in Tools : launch verilog compiler with current selection will get enable. Click it to compile the code 
+&emsp;&emsp;Left side select the file and in Tools : launch verilog compiler with current selection will get enable. Click it to compile the code 
 
-Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation 
+&emsp;&emsp;Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation 
 
 ![Screenshot 2024-10-05 085639](https://github.com/user-attachments/assets/f1a68c5c-41fd-4e7f-965a-aca05848b385)
 
-### Fig 7: Compiled database in worklib
+**<p align="center"> Fig 7: Compiled database in worklib**
 
-After compilation it will come under worklib you can see in right side window
+&emsp;&emsp;After compilation it will come under worklib you can see in right side window
 
-Select the test bench and compile it. It will come under worklib. Under Worklib you can see the module and test-bench. 
+&emsp;&emsp;Select the test bench and compile it. It will come under worklib. Under Worklib you can see the module and test-bench. 
 
-The cds.lib file is an ASCII text file. It defines which libraries are accessible and where they are located. It contains statements that map logical library names to their physical
+&emsp;&emsp;The cds.lib file is an ASCII text file. It defines which libraries are accessible and where they are located. It contains statements that map logical library names to their physical directory paths. For this Design, you will define a library called “worklib”
 
-directory paths. For this Design, you will define a library called “worklib”
+**Step 2: Elaboration:**
 
-#3 Step 2: Elaboration:– 
+&emsp;&emsp;To check the port connections in hierarchical design
 
-To check the port connections in hierarchical design
+&emsp;&emsp;Inputs: Top level design / test bench Verilog codes 
 
-Inputs: Top level design / test bench Verilog codes 
+&emsp;&emsp;Outputs: Elaborate database updated in mapped library if successful, generates report else error reported in log file 
 
-Outputs: Elaborate database updated in mapped library if successful, generates report else error reported in log file 
+**Steps for elaboration:** 
 
-## 	Steps for elaboration 
+&emsp;&emsp;Run the elaboration command with elaborate options 
 
-– Run the elaboration command with elaborate options 
+&emsp;&emsp;1.It builds the module hierarchy
 
-1.It builds the module hierarchy
+&emsp;&emsp;2.Binds modules to module instances 
 
-2.Binds modules to module instances 
+&emsp;&emsp;3.Computes parameter values
 
-3.Computes parameter values
+&emsp;&emsp;4.Checks for hierarchical names conflicts
 
-4.Checks for hierarchical names conflicts
+&emsp;&emsp;5.It also establishes net connectivity and prepares all of this for simulation
 
-5.It also establishes net connectivity and prepares all of this for simulation
-
-After elaboration the file will come under snapshot. Select the test bench and simulate it.
+&emsp;&emsp;After elaboration the file will come under snapshot. Select the test bench and simulate it.
 
 ![Screenshot 2024-10-05 085728](https://github.com/user-attachments/assets/3ed91b3e-c76b-4366-aa70-0b70c600502e)
 
-## Fig 8: Elaboration Launch Option
+**<p align="center">Fig 8: Elaboration Launch Option**
 
-## Step 3: Simulation: 
+**Step 3: Simulation:**
 
-– Simulate with the given test vectors over a period of time to observe the output behaviour. 
+&emsp;&emsp;Simulate with the given test vectors over a period of time to observe the output behaviour. 
 
-Inputs: Compiled and Elaborated top level module name 
+&emsp;&emsp;Inputs: Compiled and Elaborated top level module name 
 
-Outputs: Simulation log file, waveforms for debugging 
+&emsp;&emsp;Outputs: Simulation log file, waveforms for debugging 
 
-Simulation allow to dump design and test bench signals into a waveform 
+&emsp;&emsp;Simulation allow to dump design and test bench signals into a waveform 
 
-Steps for simulation – Run the simulation command with simulator options
+&emsp;&emsp;Steps for simulation – Run the simulation command with simulator options
 
 ![Picture6](https://github.com/user-attachments/assets/29ed6d1e-5949-4e7a-8611-34f126030463)
 
-## Fig 9: Design Browser window for simulation
+**<p align="center">Fig 9: Design Browser window for simulation**
 
 ![Picture7](https://github.com/user-attachments/assets/e2342407-785d-497f-9b8e-a96ee3ec4871)
 
-## Fig 10:Simulation Waveform Window
+**<p align="center"> Fig 10:Simulation Waveform Window**
 
 ![Picture8](https://github.com/user-attachments/assets/af1b0083-5727-41db-b3ed-c744ed0be547)
 
-## Fig 11:Simulation Waveform Window
+**<p align="center">  Fig 11:Simulation Waveform Window**
 
+**Result:**
 
+&emsp;&emsp;The functionality of a 4bit_up-down asynchronous reset Counter was successfully verified using a test bench and simulated with the nclaunch tool.
